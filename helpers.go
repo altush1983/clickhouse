@@ -112,8 +112,8 @@ func quote(v driver.Value) string {
 }
 
 func formatTime(value time.Time) string {
-	if (value.Hour() + value.Minute() + value.Second() + value.Nanosecond()) == 0 {
+	/*if (value.Hour() + value.Minute() + value.Second() + value.Nanosecond()) == 0 {
 		return fmt.Sprintf("toDate(%d)", int(int16(value.Unix()/24/3600)))
-	}
+	}*/
 	return fmt.Sprintf("toDateTime(%d)", int(uint32(value.Unix())))
 }
